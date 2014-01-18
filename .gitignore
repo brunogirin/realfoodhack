@@ -1,3 +1,6 @@
 # Ignore automatically generated directory
 db
 
+# gEdit backup files
+*~
+
