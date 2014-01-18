@@ -72,7 +72,7 @@ g.addEdge(rsalt, upinch, 'quantity', [value:1])
 
 /*
 Select all ingredients:
-recipe = g.V('type','recipe').has('name','Milliat du Perigord').next()
+recipe = g.V('type','recipe').has('name',CONTAINS,'Milliat').next()
 recipe.out('contains').collect{[it.outE('quantity').value.next(), it.out('quantity').abbr.next(), it.out('ingredient').name.next()]}
 */
 
