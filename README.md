@@ -9,9 +9,10 @@ using the [Groovy](http://groovy.codehaus.org/) implementation of
 
 Setup
 -----
-- Download and unzip Titan,
-- Run the scripts using gremlin (either `gremlin.sh` or `gremlin.bat`
-  depending on your operating system):
+Download and unzip Titan.
+
+Run the scripts using gremlin (either `gremlin.sh` or `gremlin.bat` depending
+on your operating system):
 
     $ titan/bin/gremlin.sh < model/init.groovy
     $ titan/bin/gremlin.sh < model/recipe-millat.groovy
