@@ -12,6 +12,9 @@ gram = g.addVertex(null,[type:'unit',category:'weight',name:'gram',abbr:'g'])
 kgram = g.addVertex(null,[type:'unit',category:'weight',name:'kilogram',abbr:'kg'])
 g.addEdge(kgram, gram, 'converts-to', [ratio:1000])
 g.addVertex(null,[type:'unit',category:'unit',name:'unit',abbr:''])
+g.addVertex(null,[type:'unit',category:'volume',name:'tea spoon',abbr:'tsp'])
+g.addVertex(null,[type:'unit',category:'volume',name:'table spoon',abbr:'tbsp'])
+g.addVertex(null,[type:'unit',category:'volume',name:'pinch',abbr:'pinch'])
 
 /* Create a few ingredients */
 g.addVertex(null,[type:'ingredient',name:'squash'])
