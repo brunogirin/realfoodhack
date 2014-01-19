@@ -69,6 +69,17 @@ rsalt = g.addVertex(null,[type:'recipe-ingredient'])
 g.addEdge(recipe, rsalt, 'contains')
 g.addEdge(rsalt, isalt, 'ingredient')
 g.addEdge(rsalt, upinch, 'quantity', [value:1])
+// Method
+ms1 = g.addVertex(null,[type:'method-step',description:'Preheat the oven to 210C or Gas mark 6.'])
+g.addEdge(recipe, ms1, 'contains-step', [index:1])
+ms2 = g.addVertex(null,[type:'method-step',description:'Cut the flesh of the squash large cubes. Put them in a saucepan with a little salt and cover with water. Bring the pan to the boil and cook for 10 minutes or until tender.'])
+g.addEdge(recipe, ms2, 'contains-step', [index:2])
+ms3 = g.addVertex(null,[type:'method-step',description:'Drain the squash and blend it in a food processor.'])
+g.addEdge(recipe, ms3, 'contains-step', [index:3])
+ms4 = g.addVertex(null,[type:'method-step',description:'Add the sugar, egg, almond and flour. Mix while slowly adding the milk.'])
+g.addEdge(recipe, ms4, 'contains-step', [index:4])
+ms5 = g.addVertex(null,[type:'method-step',description:'Butter an ovenproof flan dish. Pour the mix in and cook in the oven for 25 minutes, until the milliat is a golden colour. Serve warm.'])
+g.addEdge(recipe, ms5, 'contains-step', [index:5])
 
 /*
 Select all ingredients:
