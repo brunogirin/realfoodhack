@@ -3,6 +3,10 @@ body {
     min-height: 740px;
 }
 
+p {
+    margin: 5% 0;
+}
+
 .step {
     position: relative;
     width: 900px;
