@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>RealFoodHack - Turning food recipes into connected graphs</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/fallback.css" rel="stylesheet" />
+    <link href="css/slides.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+    <div id="slide1" class="step slide" data-x="-1500" data-y="0">
+        <p>#RealFoodHack</p>
+        <p>Turning food recipes into directed graphs</p>
+    </div>
+    <div id="slide2" class="step slide" data-x="-500" data-y="0">
+        <p>Directed graph</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" version="1.1" viewBox="0 0 600 400">
+            <g class="vertex">
+                <circle cx="100" cy="200" r="50" />
+                <text x="100" y="208" text-anchor="middle">Vertex</text>
+            </g>
+            <g class="vertex">
+                <circle cx="500" cy="200" r="50" />
+                <text x="500" y="208" text-anchor="middle">Vertex</text>
+            </g>
+            <g class="edge">
+                <path d="M150 200 h 300 m -20 -20 l 20 20 l -20 20" />
+                <text x="300" y="190" text-anchor="middle">Edge</text>
+            </g>
+        </svg>
+    </div>
+    <div id="slide3" class="step slide" data-x="500" data-y="0">
+        <p>Vertices: named attributes</p>
+        <p>Edges: text label + named attributes</p>
+        <p>Duck typing</p>
+    </div>
+    <div id="slide4" class="step slide" data-x="1500" data-y="0">
+        <p>Storage: <a href="http://thinkaurelius.github.io/titan/">Titan</a></p>
+        <p>Query language: <a href="https://github.com/tinkerpop/gremlin/wiki">Gremlin</a></p>
+    </div>
+    <div id="slide5" class="step slide" data-x="0" data-y="1500" data-scale="4">
+        <svg class="large" xmlns="http://www.w3.org/2000/svg" width="900" height="700" version="1.1" viewBox="-50 -50 850 650">
+            <!-- Recipe -->
+            <g class="vertex">
+                <circle cx="100" cy="50" r="25" />
+                <text x="100" y="54" text-anchor="middle">Recipe</text>
+            </g>
+            <!-- Ingredients -->
+            <g class="vertex">
+                <circle cx="300" cy="50" r="25" />
+            </g>
+            <g class="edge">
+                <path d="M125 50 h 150 m -8 -8 l 8 8 l -8 8" />
+                <text x="200" y="45" text-anchor="middle">contains</text>
+            </g>
+            <g class="vertex">
+                <circle cx="500" cy="50" r="25" />
+                <text x="500" y="54" text-anchor="middle">sugar</text>
+            </g>
+            <g class="edge">
+                <path d="M325 50 h 150 m -8 -8 l 8 8 l -8 8" />
+                <text x="400" y="45" text-anchor="middle">ingredient</text>
+            </g>
+            <g class="vertex">
+                <circle cx="400" cy="100" r="25" />
+                <text x="400" y="104" text-anchor="middle">g</text>
+            </g>
+            <g class="edge">
+                <path d="M300 75 q 0,25 75,25 m -8 -8 l 8 8 l -8 8" />
+                <text x="325" y="90" text-anchor="middle">200</text>
+            </g>
+            <g class="vertex">
+                <circle cx="300" cy="150" r="25" />
+            </g>
+            <g class="edge">
+                <path d="M125 50 c 50,0 100,100 150,100 m -8 -8 l 8 8 l -8 8" />
+            </g>
+            <g class="vertex">
+                <circle cx="500" cy="150" r="25" />
+                <text x="500" y="148" text-anchor="middle">ground</text>
+                <text x="500" y="160" text-anchor="middle">almonds</text>
+            </g>
+            <g class="edge">
+                <path d="M325 150 h 150 m -8 -8 l 8 8 l -8 8" />
+            </g>
+            <g class="vertex">
+                <circle cx="700" cy="150" r="25" />
+                <text x="700" y="154" text-anchor="middle">almonds</text>
+            </g>
+            <g class="edge">
+                <path d="M525 150 h 150 m -8 -8 l 8 8 l -8 8" />
+                <text x="600" y="145" text-anchor="middle">derived from</text>
+            </g>
+            <g class="edge">
+                <path d="M300 125 q 0,-25 75,-25 m -8 -8 l 8 8 l -8 8" />
+                <text x="325" y="120" text-anchor="middle">150</text>
+            </g>
+            <g class="vertex">
+                <circle cx="300" cy="250" r="25" />
+            </g>
+            <g class="edge">
+                <path d="M125 50 c 50,0 100,200 150,200 m -8 -8 l 8 8 l -8 8" />
+            </g>
+            <g class="vertex">
+                <circle cx="500" cy="250" r="25" />
+                <text x="500" y="254" text-anchor="middle">squash</text>
+            </g>
+            <g class="edge">
+                <path d="M325 250 h 150 m -8 -8 l 8 8 l -8 8" />
+            </g>
+            <g class="vertex">
+                <circle cx="400" cy="300" r="25" />
+                <text x="400" y="304" text-anchor="middle">kg</text>
+            </g>
+            <g class="edge">
+                <path d="M300 275 q 0,25 75,25 m -8 -8 l 8 8 l -8 8" />
+                <text x="325" y="290" text-anchor="middle">1.5</text>
+            </g>
+            <g class="edge">
+                <path d="M400 275 v -150 m -8 8 l 8 -8 l 8 8" />
+                <text x="405" y="200" text-anchor="beginning">x1000</text>
+            </g>
+            <!-- method -->
+            <g class="vertex">
+                <circle cx="300" cy="400" r="25" />
+                <text x="300" y="404" text-anchor="middle">step 1</text>
+            </g>
+            <g class="edge">
+                <path d="M100 75 q 0,325 175,325 m -8 -8 l 8 8 l -8 8" />
+                <text x="140" y="200" text-anchor="middle">has step</text>
+            </g>
+            <g class="vertex">
+                <circle cx="300" cy="500" r="25" />
+                <text x="300" y="504" text-anchor="middle">step 2</text>
+            </g>
+            <g class="edge">
+                <path d="M100 75 q 0,425 175,425 m -8 -8 l 8 8 l -8 8" />
+            </g>
+        </svg>
+    </div>
+</div>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
+

@@ -1,5 +1,5 @@
-Real Food Hack: _Turning food recipes into connected graphs_
-============================================================
+Real Food Hack: _Turning food recipes into directed graphs_
+===========================================================
 
 This is a bit of experimentation with graph databases done at the London
 Real Food Hack on 18th Jan 2014.

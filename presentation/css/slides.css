@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    min-height: 740px;
+}
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active {
+    opacity: 1
+}
+
+g.vertex circle {
+    fill: #ccf;
+    stroke: #00f;
+    stroke-width: 5;
+}
+g.vertex text {
+    font-size: 24px;
+    fill: #00f;
+    stroke: none;
+}
+
+g.edge line, g.edge path {
+    stroke: #f00;
+    stroke-width: 5;
+    fill: none;
+}
+
+g.edge text {
+    font-size: 24px;
+    fill: #f00;
+    stroke: none;
+}
+
+svg.large g text {
+    font-size: 12px;
+}
+
+svg.large g circle, svg.large g line, svg.large g path {
+    stroke-width: 2;
+}
+
